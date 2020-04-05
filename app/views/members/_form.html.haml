@@ -1,0 +1,89 @@
+= form_for @member do |f|
+  .new_member__field
+    .new_member__field--left
+      = f.label :name, "名前", class: 'member-form__label'
+    .new_member__field--right
+      = f.text_field :name, class: "member-form__name member-form__input", placeholder: "名前を入力してください"
+
+  .new_member__field.clearfix
+    .new_member__field--left
+      = f.label :tel, "電話番号", class: 'member-form__label'
+    .new_member__field--right
+      = f.text_field :tel, class: "member-form__tel member-form__input", placeholder: "電話番号を入力してください"
+
+  .new_member__field.clearfix
+    .new_member__field--left
+      = f.label :birthday, "誕生日", class: 'member-form__label'
+    .new_member__field--right
+      = f.date_select :birthday, class: "member-form__birthday member-form__input", use_month_numbers: true,start_year: 1930, end_year: (Time.now.year - 10), default: Date.new(1989, 1, 1)
+
+  .new_member__field.clearfix
+    .new_member__field--left
+      = f.label :postcode, "郵便番号", class: 'member-form__label'
+    .new_member__field--right
+      = f.text_field :postcode, class: "member-form__postcode member-form__input", placeholder: "郵便番号を入力してください"
+
+  .new_member__field.clearfix
+    .new_member__field--left
+      = f.label :city, "都道府県", class: 'member-form__label'
+    .new_member__field--right
+      = f.select :city, Member.locations.keys, {prompt: '選択してください'}, class:"member-form__city member-form__input"
+
+  .new_member__field.clearfix
+    .new_member__field--left
+      = f.label :block, "市町村", class: 'member-form__label'
+    .new_member__field--right
+      = f.text_field :block, class: "member-form__block member-form__input", placeholder:"市町村を入力してください"
+
+  .new_member__field.clearfix
+    .new_member__field--left
+      = f.label :building, "番地", class: 'member-form__label'
+    .new_member__field--right
+      = f.text_field :building, class: "member-form__building member-form__input", placeholder:"番地を入力してください"
+
+  .new_member__field.clearfix
+    .new_member__field--left
+      = f.label :secularname, "故人の俗名", class: 'member-form__label'
+    .new_member__field--right
+      = f.text_field :secularname, class: "member-form__secularname member-form__input", placeholder: "俗名を入力してください"
+
+  .new_member__field.clearfix
+    .new_member__field--left
+      = f.label :dharmaname, "戒名", class: 'member-form__label'
+    .new_member__field--right
+      = f.text_field :dharmaname, class: "member-form__dharmaname member-form__input", placeholder: "戒名を入力してください"
+
+  .new_member__field.clearfix
+    .new_member__field--left
+      = f.label :deceased, "命日", class: 'member-form__label'
+    .new_member__field--right
+      = f.date_select :deceased, class: "member-form__deceased member-form__input", use_month_numbers: true,start_year: 1930, end_year: (Time.now.year), default: Date.new(1989, 1, 1)
+
+  .new_member__field
+    .new_member__field--left
+      = f.label :spring, "春期彼岸お申し込み", class: 'member-form__label'
+    .new_member__field--right
+      = f.check_box :spring, class: "member-form__spring member-form__input"
+
+  .new_member__field.clearfix
+    .new_member__field--left
+      = f.label :summer, "お施餓鬼お申し込み", class: 'member-form__label'
+    .new_member__field--right
+      = f.check_box :summer, class: "member-form__summer member-form__input"
+
+  .new_member__field.clearfix
+    .new_member__field--left
+      = f.label :autumn, "秋期彼岸お申し込み", class: 'member-form__label'
+    .new_member__field--right
+      = f.check_box :autumn, class: "member-form__autumn member-form__input"
+
+  .new_member__field.clearfix
+    .new_member__field--left
+      = f.label :winter, "大般若お申し込み", class: 'member-form__label'
+    .new_member__field--right
+      = f.check_box :winter, class: "member-form__winter member-form__input"
+
+  .new_member__field.clearfix
+    .new_member__field--left
+    .new_member__field--right
+      = f.submit "登録", class: "member-form__action-btn"
