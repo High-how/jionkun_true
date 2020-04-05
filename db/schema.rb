@@ -10,14 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200405012831) do
+ActiveRecord::Schema.define(version: 20200405030701) do
 
   create_table "members", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name",                      null: false
     t.string   "tel",         limit: 13,    null: false
     t.date     "birthday",                  null: false
     t.string   "postcode",    limit: 8,     null: false
-    t.string   "city",                      null: false
+    t.integer  "city",                      null: false
     t.string   "block",                     null: false
     t.string   "building",                  null: false
     t.string   "secularname"

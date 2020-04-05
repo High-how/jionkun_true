@@ -30,7 +30,7 @@
         .new_member__field--left
           = f.label :city, "都道府県", class: 'member-form__label'
         .new_member__field--right
-          = f.text_field :city, class: "member-form__city member-form__input", placeholder:"都道府県を入力してください"
+          = f.select :city, Member.locations.keys, {prompt: '選択してください'}, class:"member-form__city member-form__input"
       
       .new_member__field.clearfix
         .new_member__field--left
