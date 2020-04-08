@@ -1,3 +1,87 @@
-.wrapper
-  = render "side_bar"
-  = render "main_chat"
+.member-form
+  %h1 会員情報
+  - @members.each do |member|
+    .new_member
+      .new_member__field
+        .new_member__field--left
+          会員ID
+        .new_member__field--right
+          = member.id
+
+      .new_member__field.clearfix
+        .new_member__field--left
+          名前
+        .new_member__field--right
+          = member.name
+
+      .new_member__field.clearfix
+        .new_member__field--left
+          電話番号
+        .new_member__field--right
+          = member.tel
+          
+
+      .new_member__field.clearfix
+        .new_member__field--left
+          生年月日
+        .new_member__field--right
+          = member.birthday
+          
+
+      .new_member__field.clearfix
+        .new_member__field--left
+          郵便番号
+        .new_member__field--right
+          = member.postcode
+        
+
+      .new_member__field.clearfix
+        .new_member__field--left
+          都道府県
+        .new_member__field--right
+          = member.city
+          
+
+      .new_member__field.clearfix
+        .new_member__field--left
+          市町村
+        .new_member__field--right
+          = member.block
+        
+
+      .new_member__field.clearfix
+        .new_member__field--left
+          番地
+        .new_member__field--right
+          = member.building
+          
+
+      .new_member__field.clearfix
+        .new_member__field--left
+          故人の俗名
+        .new_member__field--right
+          = member.secularname
+          
+
+      .new_member__field.clearfix
+        .new_member__field--left
+          戒名
+        .new_member__field--right
+          = member.dharmaname
+          
+
+      .new_member__field.clearfix
+        .new_member__field--left
+          命日
+        .new_member__field--right
+          = member.deceased
+      
+      .new_member__field.clearfix
+        .new_member__field--left
+        .new_member__field--right
+
+      .new_member__field.clearfix
+        .new_member__field--left
+        .new_member__field--right
+
+ 

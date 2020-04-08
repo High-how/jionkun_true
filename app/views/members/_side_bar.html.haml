@@ -12,9 +12,9 @@
             = icon('fas', 'cog')
             
   .items
-    = link_to "#", class: "item__member" do
+    = link_to members_path(@member), class: "item__member" do
       %p.item__member__list
         会員データ
-    = link_to "#", class: "item__list" do
+    = link_to  member_path(@member), class: "item__list" do
       %p.item__list__register
         申込み一覧
