@@ -1,5 +1,6 @@
 class MembersController < ApplicationController
   def index
+    @members = Member.all.includes(:user)
   end
 
   def new
@@ -8,11 +9,20 @@ class MembersController < ApplicationController
 
   def create
     @member = Member.new(member_params)
-    if @member.save!
+    if @member.save
       redirect_to root_path
     else
       render :new
     end
+  end
+
+  def show
+    @member1= Member.where(spring: "true")
+    @member2= Member.where(summer: "true")
+    @member3= Member.where(autumn: "true")
+    @member4= Member.where(winter: "true")
+    
+
   end
 
   def edit

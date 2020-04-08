@@ -1,0 +1,45 @@
+.member-form
+  %h1 春期彼岸申込者
+  - @member1.each do |member|
+    .new_member
+      .new_member__field
+        .new_member__field--left
+          名前 ID
+          = member.id
+        .new_member__field--right
+          = member.name
+          
+.member-form
+  %h1 お施餓鬼申込者
+  - @member2.each do |member|
+    .new_member
+      .new_member__field
+        .new_member__field--left
+          名前 ID
+          = member.id
+        .new_member__field--right
+          = member.name
+
+.member-form
+  %h1 秋期彼岸申込者
+  - @member3.each do |member|
+    .new_member
+      .new_member__field
+        .new_member__field--left
+          名前 ID
+          = member.id
+        .new_member__field--right
+          = member.name
+
+.member-form
+  %h1 大般若申込者
+  - @member4.each do |member|
+    .new_member
+      .new_member__field
+        .new_member__field--left
+          名前 ID
+          = member.id
+        .new_member__field--right
+          = member.name
+
+ 
